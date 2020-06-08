@@ -1,4 +1,4 @@
-package com.test.kafka.streams;
+package com.test.kafka.streams.word_count;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serdes;
