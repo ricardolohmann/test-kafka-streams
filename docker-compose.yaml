@@ -16,4 +16,6 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
-      - ./src/main/resources/bank_transactions:/opt/kafka/bank_transactions
+      - ./src/main/resources/bank-transactions.txt:/opt/kafka/bank-transactions.txt
+      - ./src/main/resources/user-purchases.txt:/opt/kafka/user-purchases.txt
+      - ./src/main/resources/user-table.txt:/opt/kafka/user-table.txt
