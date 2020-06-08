@@ -42,6 +42,28 @@ setup_bank_balance:
 		--topic bank-balance \
 		--config cleanup.policy=compact
 
+setup_enrich_events:
+	@ docker-compose exec kafka /opt/kafka/bin/kafka-topics.sh --create \
+		--zookeeper zookeeper:2181 \
+		--replication-factor 1 \
+		--partitions 2 \
+		--topic user-table
+	@ docker-compose exec kafka /opt/kafka/bin/kafka-topics.sh --create \
+		--zookeeper zookeeper:2181 \
+		--replication-factor 1 \
+		--partitions 3 \
+		--topic user-purchases
+	@ docker-compose exec kafka /opt/kafka/bin/kafka-topics.sh --create \
+		--zookeeper zookeeper:2181 \
+		--replication-factor 1 \
+		--partitions 3 \
+		--topic user-purchases-enriched-inner-join
+	@ docker-compose exec kafka /opt/kafka/bin/kafka-topics.sh --create \
+		--zookeeper zookeeper:2181 \
+		--replication-factor 1 \
+		--partitions 3 \
+		--topic user-purchases-enriched-left-join
+
 run_kafka_consumer:
 	@ docker-compose exec kafka /opt/kafka/bin/kafka-console-consumer.sh \
 		--bootstrap-server kafka:9092 \
@@ -61,10 +83,10 @@ run_console_producer:
 run_producer_perf_test:
 	@docker-compose exec kafka /opt/kafka/bin/kafka-producer-perf-test.sh \
 		--topic $(topic) \
-		--num-records 10000 \
-		--throughput -1 \
+		--num-records 1000 \
+		--throughput 2 \
 		--payload-delimiter "\n" \
-		--payload-file /opt/kafka/bank_transactions \
+		--payload-file /opt/kafka/$(topic).txt \
 		--producer-props \
 			acks=1 \
 			bootstrap.servers=kafka:9092 \

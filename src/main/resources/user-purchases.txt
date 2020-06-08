@@ -1,0 +1,9 @@
+john:Computer
+john:Apples
+joseph:Table
+joseph:Oranges
+rick:Chair
+rick:Berry
+stephan:Telephone
+stephan:Grapes
+sofia:nothing
