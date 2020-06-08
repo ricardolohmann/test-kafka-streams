@@ -1,0 +1,15 @@
+{"name": "Samuel", "amount": 123, "time": "2020-06-02T09:00:00.00Z"}
+{"name": "Samuel", "amount": 456, "time": "2020-06-02T10:00:00.00Z"}
+{"name": "Samuel", "amount": 789, "time": "2020-06-02T11:00:00.00Z"}
+{"name": "Roger", "amount": 12, "time": "2020-06-02T09:10:00.00Z"}
+{"name": "Roger", "amount": 34, "time": "2020-06-02T10:10:00.00Z"}
+{"name": "Roger", "amount": 56, "time": "2020-06-02T11:10:00.00Z"}
+{"name": "Lucky", "amount": 23, "time": "2020-06-02T09:15:00.00Z"}
+{"name": "Lucky", "amount": 45, "time": "2020-06-02T10:15:00.00Z"}
+{"name": "Lucky", "amount": 67, "time": "2020-06-02T11:15:00.00Z"}
+{"name": "Bianca", "amount": 31, "time": "2020-06-02T10:20:00.00Z"}
+{"name": "Bianca", "amount": 41, "time": "2020-06-02T11:20:00.00Z"}
+{"name": "Bianca", "amount": 21, "time": "2020-06-02T09:20:00.00Z"}
+{"name": "Vanuza", "amount": 51, "time": "2020-06-03T09:10:00.00Z"}
+{"name": "Vanuza", "amount": 61, "time": "2020-06-03T10:10:00.00Z"}
+{"name": "Vanuza", "amount": 71, "time": "2020-06-03T11:10:00.00Z"}
